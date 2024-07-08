@@ -49,7 +49,7 @@ body {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 4px solid #4CAF50;
+  border: 4px solid #325587;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -70,4 +70,15 @@ section {
 
 section h2 {
   margin-top: 0;
+}
+
+.content2 {
+ background-image: url(bgimg6.jpeg);
+ background-size: cover; /* This makes the image cover the entire background */
+ background-repeat: no-repeat; /* This prevents the image from repeating */
+ background-attachment: fixed; /* This makes the background image fixed when scrolling */
+ background-position: center; /* This centers the background image */
+ margin: 0; /* This removes the default margin around the body */
+ font-family: Arial, sans-serif; /* This sets a default font for the body */
+ color: rgb(67, 137, 167); /* This sets the text color to white for better contrast against dark backgrounds */
 }
