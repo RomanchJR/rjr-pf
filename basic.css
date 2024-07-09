@@ -13,10 +13,10 @@ body {
 }
 
 .navbar {
-  position: fixed;
+  position: absolute;
   top: 0;
   width: 100%;
-  background-color: #333;
+  background-color: #147a8b;
   padding: 10px 20px;
   display: flex;
   justify-content: space-between;
