@@ -13,6 +13,8 @@ body {
 }
 
 .navbar {
+  top: 50%;
+  float: none;
   position: absolute;
   top: 0;
   width: 100%;
