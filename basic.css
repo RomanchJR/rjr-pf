@@ -72,7 +72,7 @@ section h2 {
   margin-top: 0;
 }
 
-.content2 {
+.about {
  background-image: url(bgimg6.jpeg);
  background-size: cover; /* This makes the image cover the entire background */
  background-repeat: no-repeat; /* This prevents the image from repeating */
