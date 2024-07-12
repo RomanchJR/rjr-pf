@@ -1,6 +1,6 @@
 /* basic.css */
 
-body {
+.homepage {
   
   background-image: url('bgimg2.jpeg');
   background-size: cover; /* This makes the image cover the entire background */
@@ -10,6 +10,17 @@ body {
   margin: 0; /* This removes the default margin around the body */
   font-family: Arial, sans-serif; /* This sets a default font for the body */
   color: white; /* This sets the text color to white for better contrast against dark backgrounds */
+}
+
+.aboutpage {
+  background-image: url(bgimg6.jpeg);
+  background-size: cover; /* This makes the image cover the entire background */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  background-attachment: fixed; /* This makes the background image fixed when scrolling */
+  background-position: center; /* This centers the background image */
+  margin: 0; /* This removes the default margin around the body */
+  font-family: Arial, sans-serif; /* This sets a default font for the body */
+  color: rgb(141, 73, 172); /* This sets the text color to white for better contrast against dark backgrounds */
 }
 
 .navbar {
@@ -74,13 +85,3 @@ section h2 {
   margin-top: 0;
 }
 
-#about {
- background-image: url(bgimg6.jpeg);
- background-size: cover; /* This makes the image cover the entire background */
- background-repeat: no-repeat; /* This prevents the image from repeating */
- background-attachment: fixed; /* This makes the background image fixed when scrolling */
- background-position: center; /* This centers the background image */
- margin: 0; /* This removes the default margin around the body */
- font-family: Arial, sans-serif; /* This sets a default font for the body */
- color: rgb(141, 73, 172); /* This sets the text color to white for better contrast against dark backgrounds */
-}
