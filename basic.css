@@ -9,7 +9,7 @@
   background-position: center; /* This centers the background image */
   margin: 0; /* This removes the default margin around the body */
   font-family: Arial, sans-serif; /* This sets a default font for the body */
-  color: white; /* This sets the text color to white for better contrast against dark backgrounds */
+  color: rgb(17, 110, 144); /* This sets the text color to white for better contrast against dark backgrounds */
 }
 
 .aboutpage {
