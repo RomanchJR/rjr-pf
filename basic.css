@@ -9,7 +9,7 @@
   background-position: center; /* This centers the background image */
   margin: 0; /* This removes the default margin around the body */
   font-family: Arial, sans-serif; /* This sets a default font for the body */
-  color: rgb(17, 110, 144); /* This sets the text color to white for better contrast against dark backgrounds */
+  color: #116e90; /* This sets the text color to white for better contrast against dark backgrounds */
 }
 
 .aboutpage {
@@ -23,6 +23,16 @@
   color: rgb(141, 73, 172); /* This sets the text color to white for better contrast against dark backgrounds */
 }
 
+.calenote {
+  background-image: url('bgimg12.jpg');
+  background-size: cover; /* This makes the image cover the entire background */
+  background-repeat: no-repeat; /* This prevents the image from repeating */
+  background-attachment: fixed; /* This makes the background image fixed when scrolling */
+  background-position: center; /* This centers the background image */
+  margin: 0; /* This removes the default margin around the body */
+  font-family: Arial, sans-serif; /* This sets a default font for the body */
+  color: #eef1f2; /* This sets the text color to white for better contrast against dark backgrounds */
+}
 .navbar {
   top: 50%;
   float: none;
