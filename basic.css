@@ -8,7 +8,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
-  background-color: #1b1b1b; /* Dark background for consistency */
 }
 
 ::selection {
@@ -153,38 +152,52 @@ section {
   background-color: #1b1b1b;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-section .content {
-  max-width: 80%;
-  text-align: center;
+section .title {
+  max-width: 60%;
+  width: 100%;
+  align-self: center;
+  transform: translateY(-50px);
+  margin: 0 auto;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+section .title span {
+  display: inline-block;
+  font-size: 5vw;
   color: #efefef;
-}
-
-section .content h1 {
-  font-size: 4rem;
+  width: 100%;
+  text-transform: uppercase;
+  transform: translateX(-100%);
+  animation: byBottom 1s ease both;
   font-weight: 600;
-  margin-bottom: 20px;
+  letter-spacing: 0.25vw;
 }
 
-section .content p {
-  font-size: 1.25rem;
-  color: #ccc;
-  line-height: 1.6;
+section .title span:last-child {
+  font-size: 1rem;
+  animation: byBottom 1s 0.25s ease both;
 }
 
-section .content a {
+section .title span a {
+  position: relative;
+  display: inline-block;
+  margin-left: 0.5rem;
   text-decoration: none;
   color: #f7ca18;
-  font-weight: bold;
-  margin-top: 20px;
-  display: inline-block;
 }
 
-section .content a:hover {
-  color: #ececec;
+section .title span a::after {
+  content: "";
+  height: 2px;
+  background-color: #f7ca18;
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  animation: linkAfter 0.5s 1s ease both;
 }
 
 /* Animations */
@@ -197,40 +210,13 @@ section .content a:hover {
   }
 }
 
-/* About & Calenote Page Content Styling */
-.about-section,
-.calenote-section {
-  background-color: #1b1b1b;
-  color: #efefef;
-  padding: 50px 20px;
-}
-
-.about-section h1,
-.calenote-section h1 {
-  font-size: 3rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.about-section p,
-.calenote-section p {
-  font-size: 1.25rem;
-  color: #ccc;
-  line-height: 1.6;
-  margin-bottom: 30px;
-}
-
-.about-section a,
-.calenote-section a {
-  text-decoration: none;
-  color: #f7ca18;
-  font-weight: bold;
-  display: inline-block;
-}
-
-.about-section a:hover,
-.calenote-section a:hover {
-  color: #ececec;
+@keyframes linkAfter {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 30px;
+  }
 }
 
 /* Contact Page Styling */
