@@ -15,7 +15,7 @@ body {
   color: #1b1b1b;
 }
 
-/* Navbar Styles */
+/* Navbar Styles (unchanged for Index) */
 nav {
   width: 100%;
   background-color: #0b0b0b;
@@ -76,7 +76,7 @@ nav li:active {
   background-color: #222;
 }
 
-/* Section Styling */
+/* Section Styling for About and CaleNote */
 section {
   background-color: #1b1b1b;
   height: 100vh;
@@ -146,7 +146,7 @@ section .title span a::after {
   }
 }
 
-/* Contact Page Styling */
+/* Contact Page Styling (unchanged) */
 form {
   display: flex;
   flex-direction: column;
