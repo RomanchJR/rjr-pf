@@ -20,7 +20,7 @@ nav {
   width: 100%;
   background-color: #0b0b0b;
   position: fixed;
-  bottom: 0;
+  top: 0;
   height: 100px;
   overflow: hidden;
 }
@@ -51,7 +51,6 @@ nav li {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 800;
-  transform: translateY(100%);
 }
 
 nav li.active {
@@ -77,81 +76,21 @@ nav li:active {
   background-color: #222;
 }
 
-nav li.slide {
-  position: absolute;
-  left: -20vw;
-  top: 0;
-  background-color: #fff;
-  z-index: -1;
-  height: 2px;
-  margin-top: 98px;
-  transition: left 0.3s ease;
-  transform: translateY(0);
-}
-
-/* Navigation Animations */
-@keyframes pop {
-  0% {
-    transform: translateY(100%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-nav li:nth-child(1) {
-  animation: pop 0.5s 0.15s 1 forwards;
-}
-
-nav li:nth-child(2) {
-  animation: pop 0.5s 0.3s 1 forwards;
-}
-
-nav li:nth-child(3) {
-  animation: pop 0.5s 0.45s 1 forwards;
-}
-
-nav li:nth-child(4) {
-  animation: pop 0.5s 0.6s 1 forwards;
-}
-
-nav li:nth-child(5) {
-  animation: pop 0.5s 0.75s 1 forwards;
-}
-
-nav li:nth-child(6) {
-  animation: pop 0.5s 0.9s 1 forwards;
-}
-
-nav li:nth-child(7) {
-  animation: pop 0.5s 1.05s 1 forwards;
-}
-
-nav li:nth-child(1):hover ~ .slide {
-  left: 0;
-}
-
-nav li:nth-child(2):hover ~ .slide {
-  left: 20vw;
-}
-
-nav li:nth-child(3):hover ~ .slide {
-  left: 40vw;
-}
-
-nav li:nth-child(4):hover ~ .slide {
-  left: 60vw;
-}
-
-nav li:nth-child(5):hover ~ .slide {
-  left: 80vw;
-}
-
 /* Section Styling */
 section {
   background-color: #1b1b1b;
   height: 100vh;
   display: flex;
+  flex-direction: column;
+}
+
+section .content {
+  max-width: 60%;
+  width: 100%;
+  align-self: center;
+  margin: auto;
+  padding: 20px;
+  color: #efefef;
 }
 
 section .title {
@@ -170,15 +109,12 @@ section .title span {
   color: #efefef;
   width: 100%;
   text-transform: uppercase;
-  transform: translateX(-100%);
-  animation: byBottom 1s ease both;
   font-weight: 600;
   letter-spacing: 0.25vw;
 }
 
 section .title span:last-child {
   font-size: 1rem;
-  animation: byBottom 1s 0.25s ease both;
 }
 
 section .title span a {
@@ -201,15 +137,6 @@ section .title span a::after {
 }
 
 /* Animations */
-@keyframes byBottom {
-  0% {
-    transform: translateY(150%);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
 @keyframes linkAfter {
   0% {
     width: 0;
