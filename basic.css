@@ -8,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Open Sans', sans-serif;
+  background-color: #1b1b1b; /* Dark background for consistency */
 }
 
 ::selection {
@@ -15,12 +16,12 @@ body {
   color: #1b1b1b;
 }
 
-/* Navbar Styles (unchanged for Index) */
+/* Navbar Styles */
 nav {
   width: 100%;
   background-color: #0b0b0b;
   position: fixed;
-  top: 0;
+  bottom: 0;
   height: 100px;
   overflow: hidden;
 }
@@ -51,6 +52,7 @@ nav li {
   text-transform: uppercase;
   letter-spacing: 4px;
   font-weight: 800;
+  transform: translateY(100%);
 }
 
 nav li.active {
@@ -76,77 +78,162 @@ nav li:active {
   background-color: #222;
 }
 
-/* Section Styling for About and CaleNote */
+nav li.slide {
+  position: absolute;
+  left: -20vw;
+  top: 0;
+  background-color: #fff;
+  z-index: -1;
+  height: 2px;
+  margin-top: 98px;
+  transition: left 0.3s ease;
+  transform: translateY(0);
+}
+
+/* Navigation Animations */
+@keyframes pop {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+nav li:nth-child(1) {
+  animation: pop 0.5s 0.15s 1 forwards;
+}
+
+nav li:nth-child(2) {
+  animation: pop 0.5s 0.3s 1 forwards;
+}
+
+nav li:nth-child(3) {
+  animation: pop 0.5s 0.45s 1 forwards;
+}
+
+nav li:nth-child(4) {
+  animation: pop 0.5s 0.6s 1 forwards;
+}
+
+nav li:nth-child(5) {
+  animation: pop 0.5s 0.75s 1 forwards;
+}
+
+nav li:nth-child(6) {
+  animation: pop 0.5s 0.9s 1 forwards;
+}
+
+nav li:nth-child(7) {
+  animation: pop 0.5s 1.05s 1 forwards;
+}
+
+nav li:nth-child(1):hover ~ .slide {
+  left: 0;
+}
+
+nav li:nth-child(2):hover ~ .slide {
+  left: 20vw;
+}
+
+nav li:nth-child(3):hover ~ .slide {
+  left: 40vw;
+}
+
+nav li:nth-child(4):hover ~ .slide {
+  left: 60vw;
+}
+
+nav li:nth-child(5):hover ~ .slide {
+  left: 80vw;
+}
+
+/* Section Styling */
 section {
   background-color: #1b1b1b;
   height: 100vh;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 section .content {
-  max-width: 60%;
-  width: 100%;
-  align-self: center;
-  margin: auto;
-  padding: 20px;
+  max-width: 80%;
+  text-align: center;
   color: #efefef;
 }
 
-section .title {
-  max-width: 60%;
-  width: 100%;
-  align-self: center;
-  transform: translateY(-50px);
-  margin: 0 auto;
-  overflow: hidden;
-  padding-bottom: 10px;
-}
-
-section .title span {
-  display: inline-block;
-  font-size: 5vw;
-  color: #efefef;
-  width: 100%;
-  text-transform: uppercase;
+section .content h1 {
+  font-size: 4rem;
   font-weight: 600;
-  letter-spacing: 0.25vw;
+  margin-bottom: 20px;
 }
 
-section .title span:last-child {
-  font-size: 1rem;
+section .content p {
+  font-size: 1.25rem;
+  color: #ccc;
+  line-height: 1.6;
 }
 
-section .title span a {
-  position: relative;
-  display: inline-block;
-  margin-left: 0.5rem;
+section .content a {
   text-decoration: none;
   color: #f7ca18;
+  font-weight: bold;
+  margin-top: 20px;
+  display: inline-block;
 }
 
-section .title span a::after {
-  content: "";
-  height: 2px;
-  background-color: #f7ca18;
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  width: 0;
-  animation: linkAfter 0.5s 1s ease both;
+section .content a:hover {
+  color: #ececec;
 }
 
 /* Animations */
-@keyframes linkAfter {
+@keyframes byBottom {
   0% {
-    width: 0;
+    transform: translateY(150%);
   }
   100% {
-    width: 30px;
+    transform: translateY(0);
   }
 }
 
-/* Contact Page Styling (unchanged) */
+/* About & Calenote Page Content Styling */
+.about-section,
+.calenote-section {
+  background-color: #1b1b1b;
+  color: #efefef;
+  padding: 50px 20px;
+}
+
+.about-section h1,
+.calenote-section h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.about-section p,
+.calenote-section p {
+  font-size: 1.25rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.about-section a,
+.calenote-section a {
+  text-decoration: none;
+  color: #f7ca18;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.about-section a:hover,
+.calenote-section a:hover {
+  color: #ececec;
+}
+
+/* Contact Page Styling */
 form {
   display: flex;
   flex-direction: column;
