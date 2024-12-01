@@ -36,5 +36,5 @@ function sendMail () {
         message: document.getElementById("message").value
     }
 
-    emailjs.send("RomJR")
+    emailjs.send("RomJR", "romjr", parms).then(alert("Email Sent!!")) 
 }
