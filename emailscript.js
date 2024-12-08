@@ -17,24 +17,25 @@
 //         })
 //         .then(
 //             function (response) {
-//                 document.getElementById("responseMessage").innerHTML = 
+//                 document.getElementById("responseMessage").innerHTML =
 //                   `<p style="color: green;">Message sent successfully!</p>`;
 //             },
 //             function (error) {
-//                 document.getElementById("responseMessage").innerHTML = 
+//                 document.getElementById("responseMessage").innerHTML =
 //                   `<p style="color: red;">Failed to send message. Please try again later.</p>`;
 //                 console.error("EmailJS error:", error);
 //             }
 //         );
 // });
 
+function sendMail() {
+  let parms = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
 
-function sendMail () {
-    let parms = {
-        name: document.getElementById("name").value,
-        email: document.getElementById("email").value,
-        message: document.getElementById("message").value
-    }
-
-    emailjs.send("RomJR", "romjr", parms).then(alert("Email Sent!!")) 
+  emailjs
+    .send("portfolio_website", "template_pw", parms)
+    .then(alert("Email Sent!!"));
 }
