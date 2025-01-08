@@ -7,7 +7,7 @@ a {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 ::selection {
@@ -189,7 +189,12 @@ section .title span a {
   color: #f7ca18;
 }
 
+section .title span a:hover {
+  color: rgb(96, 158, 215);
+}
+
 section .title span a::after {
+  position: absolute;
   content: "";
   height: 2px;
   background-color: #f7ca18;
@@ -198,6 +203,10 @@ section .title span a::after {
   left: 0;
   width: 0;
   animation: linkAfter 0.5s 1s ease both;
+}
+
+section .title span a:hover::after {
+  background-color: rgb(96, 158, 215);
 }
 
 /* Animations */
@@ -215,7 +224,7 @@ section .title span a::after {
     width: 0;
   }
   100% {
-    width: 30px;
+    width: 100%;
   }
 }
 
@@ -283,4 +292,3 @@ form button:hover {
   color: #f7ca18;
   transform: scale(1.05);
 }
-
