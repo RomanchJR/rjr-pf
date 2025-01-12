@@ -292,3 +292,56 @@ form button:hover {
   color: #f7ca18;
   transform: scale(1.05);
 }
+
+/* Adjust hover animations for smaller screens */
+@media (max-width: 768px) {
+  /* Navbar Slide Hover Adjustment */
+  nav li:nth-child(1):hover ~ .slide {
+    left: 0;
+  }
+
+  nav li:nth-child(2):hover ~ .slide {
+    left: 25%;
+  }
+
+  nav li:nth-child(3):hover ~ .slide {
+    left: 50%;
+  }
+
+  nav li:nth-child(4):hover ~ .slide {
+    left: 75%;
+  }
+
+  nav li:nth-child(5):hover ~ .slide {
+    left: 100%;
+  }
+
+  /* Adjust Navbar Item Width for Mobile */
+  nav li {
+    width: 25%; /* Smaller width to fit more items on mobile */
+    font-size: 10px; /* Slightly smaller font size */
+  }
+
+  /* Title Animation Adjustments */
+  section .title span {
+    font-size: 6vw; /* Slightly smaller font size for mobile */
+  }
+
+  section .title span a {
+    font-size: 4vw; /* Adjust link size */
+  }
+
+  /* Contact Section */
+  #contact h1 {
+    font-size: 2rem; /* Smaller heading size */
+  }
+
+  #contact p {
+    font-size: 1rem; /* Adjust paragraph size */
+  }
+
+  /* Form Button Hover */
+  form button:hover {
+    transform: scale(1.02); /* Reduce hover scale effect on mobile */
+  }
+}
